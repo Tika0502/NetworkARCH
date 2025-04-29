@@ -1,0 +1,7 @@
+Connecting the VMs to Internet through NAT:
+
+- iptables -t nat -A POSTROUTING -o eth2 -j MASQUERADE
+- iptables -t nat -A FORWARD -i eth0 -o eth2 -j ACCEPT
+- iptables -t nat -A FORWARD -i eth1 -o eth2 -j ACCEPT
+traceroute 8.8.8.8
+ping 8.8.8.8
