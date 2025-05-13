@@ -1,0 +1,12 @@
+Commands On Linux:
+
+Example: NET1: ETH0 -> VM1, VM2, VM3
+         NET2: ETH0->VM4, ETH1->VM1
+NET1: 1.1.123.0/24
+NET2: 1.1.14.0/24
+
+- su
+- ifconfig
+- ip route
+- ip route add /net/ via /ip@gateway/
+- sysctl -w net.ipv4.ip_forward=1
